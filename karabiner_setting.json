@@ -64,16 +64,17 @@
     },
     {
       "description": "英数キー + ,/. -> [/]",
+      "_comment": "USとJISのずれを吸収させるためtoのkey_codeは不自然なものとなっているが問題ない",
       "manipulators": [
         {
           "type": "basic",
-          "from": {"key_code": ",", "modifiers": {"mandatory": ["fn"], "optional": ["any"]}},
-          "to": [{"key_code": "["}]
+          "from": {"key_code": "comma", "modifiers": {"mandatory": ["fn"], "optional": ["any"]}},
+          "to": [{"key_code": "close_bracket"}]
         },
         {
           "type": "basic",
-          "from": {"key_code": ".", "modifiers": {"mandatory": ["fn"], "optional": ["any"]}},
-          "to": [{"key_code": "]"}]
+          "from": {"key_code": "period", "modifiers": {"mandatory": ["fn"], "optional": ["any"]}},
+          "to": [{"key_code": "backslash"}]
         }
       ]
     }
