@@ -1,27 +1,16 @@
 {
-    "title": "Using Japanese_Eisuu Shortcut",
-    "rules": [
+  "title": "英数キーを各種ショートカットに割り当てる",
+  "rules": [
+    {
+      "description": "英数キーをFnに割り当てる",
+      "manipulators": [
         {
-            "description": "Japanese_Eisuu to four modifiers keys",
-            "manipulators": [
-                {
-                    "from": "japanse_eisuu",
-                    "to": [{"key_code": "left_control", "modifiers": ["left_option", "left_command", "left_shift"]}]
-                }
-            ]
-        },
-        {
-            "description": "Japanese_Eisuu + hjkl to arrow keys",
-            "manipulators": [
-                {
-                    "type": "basic",
-                    "to": [{"key_code": "left_arrow"}],
-                    "from": {
-                        "key_code": "h",
-                        "modifiers": {"mandatory": ["left_control", "left_option", "left_command", "left_shift"]}
-                    }
-                }
-            ]
+          "type": "basic",
+          "from": {"key_code": "japanese_eisuu", "optional": ["any"]},
+          "to": [{"key_code": "fn"}],
+          "to_if_alone": [{"key_code": "japanese_eisuu"}]
         }
-    ]
+      ]
+    }
+  ]
 }
