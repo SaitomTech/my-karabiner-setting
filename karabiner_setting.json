@@ -61,6 +61,21 @@
           "to": [{"key_code": "end"}]
         }
       ]
+    },
+    {
+      "description": "英数キー + ,/. -> [/]",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {"key_code": ",", "modifiers": {"mandatory": ["fn"], "optional": ["any"]}},
+          "to": [{"key_code": "["}]
+        },
+        {
+          "type": "basic",
+          "from": {"key_code": ".", "modifiers": {"mandatory": ["fn"], "optional": ["any"]}},
+          "to": [{"key_code": "]"}]
+        }
+      ]
     }
   ]
 }
