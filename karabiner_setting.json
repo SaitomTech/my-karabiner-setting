@@ -2,74 +2,26 @@
     "title": "Using Japanese_Eisuu Shortcut",
     "rules": [
         {
-        "description": "Japanese_Eisuu + hjkl to arrow keys",
-        "manipulators": [
-            {
-            "from": {
-                "key_code": "h",
-                "modifiers": {"mandatory": ["japanese_eisuu"], "optional": ["any"]}
-            },
-            "to": [{"key_code": "left_arrow"}],
-            "type": "basic"
-            },
-            {
-            "from": {
-                "key_code": "j",
-                "modifiers": {
-                "mandatory": [
-                    "japanese_eisuu"
-                ],
-                "optional": [
-                    "any"
-                ]
-                }
-            },
-            "to": [
+            "description": "Japanese_Eisuu to four modifiers keys",
+            "manipulators": [
                 {
-                "key_code": "down_arrow"
+                    "from": "japanse_eisuu",
+                    "to": [{"key_code": "left_control", "modifiers": ["left_option", "left_command", "left_shift"]}]
                 }
-            ],
-            "type": "basic"
-            },
-            {
-            "from": {
-                "key_code": "k",
-                "modifiers": {
-                "mandatory": [
-                    "japanese_eisuu"
-                ],
-                "optional": [
-                    "any"
-                ]
-                }
-            },
-            "to": [
+            ]
+        },
+        {
+            "description": "Japanese_Eisuu + hjkl to arrow keys",
+            "manipulators": [
                 {
-                "key_code": "up_arrow"
+                    "type": "basic",
+                    "to": [{"key_code": "left_arrow"}],
+                    "from": {
+                        "key_code": "h",
+                        "modifiers": {"mandatory": ["left_control", "left_option", "left_command", "left_shift"]}
+                    }
                 }
-            ],
-            "type": "basic"
-            },
-            {
-            "from": {
-                "key_code": "l",
-                "modifiers": {
-                "mandatory": [
-                    "japanese_eisuu"
-                ],
-                "optional": [
-                    "any"
-                ]
-                }
-            },
-            "to": [
-                {
-                "key_code": "right_arrow"
-                }
-            ],
-            "type": "basic"
-            }
-        ]
+            ]
         }
     ]
 }
