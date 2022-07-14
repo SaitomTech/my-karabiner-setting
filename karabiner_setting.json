@@ -77,6 +77,16 @@
           "to": [{"key_code": "backslash"}]
         }
       ]
+    },
+    {
+      "description": "英数キー + u -> backspace",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {"key_code": "u", "modifiers": {"mandatory": ["fn"], "optional": ["any"]}},
+          "to": [{"key_code": "backspace"}]
+        }
+      ]
     }
   ]
 }
